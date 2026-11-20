@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100f1c">
+  <title>NEON / AFTER — Cover Lab</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#" aria-label="Neon After home"><span class="brand-mark">N<span>/</span>A</span><span class="brand-name">COVER LAB</span></a><span class="offline"><i></i> LOCAL STUDIO</span><a class="top-link" href="#guide">HOW IT WORKS <b>↗</b></a></header>
+  <main class="workspace">
+    <section class="intro"><div class="eyebrow"><span>01</span> / MAKE YOUR MOMENT</div><h1>THE NIGHT<br><em>IS YOURS.</em></h1><p>Turn your photos into a neon-soaked city story. Your images stay right here on your device.</p></section>
+    <section class="studio">
+      <aside class="panel controls" aria-label="Cover controls">
+        <div class="step-head"><span class="step">01</span><div><h2>Build your cover</h2><p>Shape the story, frame by frame.</p></div></div>
+        <label class="upload" for="photo-input"><span class="upload-icon">＋</span><span><strong>Add your photos</strong><small>JPG, PNG or WebP · stays on this device</small></span><span class="upload-arrow">↑</span></label>
+        <input id="photo-input" type="file" accept="image/*" multiple hidden>
+        <div class="photo-list" id="photo-list" aria-live="polite"><span class="empty-photos">Your photos will appear here</span></div>
+        <div class="field"><div class="field-label"><label for="layout">LAYOUT</label><span class="mini-note">3 ORIGINAL GRIDS</span></div><select id="layout"><option value="mosaic">CITY MOSAIC</option><option value="portrait">NIGHT SHIFT</option><option value="panorama">COASTLINE</option></select></div>
+        <div class="field"><div class="field-label"><label for="treatment">COLOUR TREATMENT</label><span class="mini-note">LIVE GRADE</span></div><select id="treatment"><option value="sunset">SUNDOWN / AMBER</option><option value="neon">PINK NEON / TEAL</option><option value="midnight">MIDNIGHT / VIOLET</option></select></div>
+        <div class="field"><div class="field-label"><label for="panel-select">EDIT PANEL</label><span class="mini-note" id="panel-count">6 FRAMES</span></div><select id="panel-select"></select></div>
+        <div class="field"><div class="field-label"><label for="photo-select">PHOTO IN FRAME</label><span class="mini-note">SELECTED FRAME</span></div><select id="photo-select"><option value="">Gradient only</option></select></div>
+        <div class="crop-controls"><div class="field-label"><span>FRAME POSITION</span><span class="mini-note">DRAG ON ART OR SLIDE</span></div>
+          <label class="range-row"><span>ZOOM</span><input id="zoom" type="range" min="1" max="2.8" step="0.01" value="1"><output id="zoom-value">1.00×</output></label>
+          <label class="range-row"><span>HORIZONTAL</span><input id="pan-x" type="range" min="-1" max="1" step="0.01" value="0"><output id="x-value">0</output></label>
+          <label class="range-row"><span>VERTICAL</span><input id="pan-y" type="range" min="-1" max="1" step="0.01" value="0"><output id="y-value">0</output></label>
+        </div>
+        <div class="field caption-field"><div class="field-label"><label for="caption">YOUR HEADLINE</label><span id="caption-count" class="mini-note">0 / 34</span></div><input id="caption" type="text" maxlength="34" value="AFTER HOURS" placeholder="Write your headline"><small>Short words hit hardest.</small></div>
+        <div class="field"><div class="field-label"><label for="subline">SECOND LINE</label><span class="mini-note">OPTIONAL</span></div><input id="subline" type="text" maxlength="48" value="A CITY THAT NEVER SLEEPS" placeholder="Add a little context"></div>
+        <div class="export-box"><div class="field-label"><label for="size">EXPORT SIZE</label><span class="mini-note">PNG · FULL RESOLUTION</span></div><select id="size"><option value="1080x1350">PORTRAIT · 1080 × 1350</option><option value="1080x1080">SQUARE · 1080 × 1080</option><option value="1920x1080">LANDSCAPE · 1920 × 1080</option></select><button id="export" class="export-button"><span>EXPORT COVER</span><span>↗</span></button><div class="privacy-note"><span>◉</span> Rendered in your browser. Nothing is uploaded.</div></div>
+      </aside>
+      <section class="preview-area" aria-label="Live cover preview">
+        <div class="preview-head"><div><span class="preview-kicker">LIVE CANVAS</span><strong id="preview-size">1080 × 1350</strong></div><div class="preview-actions"><button id="reset" title="Reset selected frame">↺ <span>RESET FRAME</span></button><span class="live-indicator"><i></i> LIVE</span></div></div>
+        <div class="canvas-wrap" id="canvas-wrap"><canvas id="cover" width="1080" height="1350" aria-label="Cover art preview. Drag within a panel to reposition its photo."></canvas><div class="canvas-tip"><span>✥</span> DRAG PHOTO TO REFRAME</div></div>
+        <div class="preview-foot"><span>NEON / AFTER — ORIGINAL COVER STUDIO</span><span>MADE FOR YOUR OWN STORY <b>✳</b></span></div>
+      </section>
+    </section>
+    <section class="guide" id="guide"><span class="eyebrow"><span>02</span> / YOUR CITY, YOUR STORY</span><p>Choose a layout. Drop in your own photos. Give the night a name. Export a full-resolution PNG to share.</p><div class="guide-tags"><span>01 ADD PHOTOS</span><span>02 FRAME THE SHOT</span><span>03 EXPORT & GO</span></div></section>
+    <footer><span>NEON / AFTER <b>✳</b> AN ORIGINAL COVER ART TOOL</span><span>OFFLINE BY DESIGN · YOUR PHOTOS STAY YOURS</span></footer>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
