@@ -27,3 +27,13 @@ The entry point copies `app/` and `screenshots/` and writes `dossier.json` with 
 ## Credits and license
 
 The demo photos `app/samples/pier.jpg` and `app/samples/boulevard.jpg` are from the official competition starter kit, which identifies them as image-model-made and free to use. `vendor/makefun-app.ts` is the kit's required, unchanged dossier library. Original application code and design are licensed under the MIT License in `LICENSE`.
+
+## Make.fun Bounty
+
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+
+[![rank](https://make.fun/badge/gta6-cover-art-01/YPPerry/gta6-cover-art/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+
+[![reward](https://make.fun/badge/gta6-cover-art-01/YPPerry/gta6-cover-art/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+
+Built for the [Make GTA 6 Cover Art bounty](https://make.fun/bounty/gta6-cover-art-01).
